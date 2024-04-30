@@ -1,0 +1,19 @@
+body {background-color: #111111; font-family: "lexend"; color: #c137f7}
+.nav {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #37f79d;
+}
+.nav a:link {
+    color: #37f79d;
+    text-decoration: none;
+}
+.nav a:visited {
+    color: #37f79d;
+    text-decoration: none;
+}
+.nav a:hover {
+    color: #37f79d;
+    text-decoration: none;
+}
