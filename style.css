@@ -1,19 +1,187 @@
-body {background-color: #111111; font-family: "lexend"; color: #c137f7}
-.nav {
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #00081a;
+    font-family: "Lexend";
+    color: #ff6bff;
+    margin: 0;
+    padding: 0;
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.button {
+    background-color: #ff6bff;
+    text-decoration: none;
+    border-radius: 10px;
+    color: #001341;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "lexend";
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-left: 50px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.button:hover {
+    transform: scale(1.17); /* Scale the button on hover */
+}
+
+.top_text {
     text-align: center;
-    font-size: 40px;
+    text-decoration: none;
+    line-height: .8em;
+}
+
+.nav {
+    text-align: left;
+    font-size: 20px;
     font-weight: bold;
-    color: #37f79d;
+    position: sticky;
+    top: 0;
+    background-color: #00081a;
+    z-index: 1;
 }
+
 .nav a:link {
-    color: #37f79d;
+    color: #16e8f7;
     text-decoration: none;
 }
+
 .nav a:visited {
-    color: #37f79d;
+    color: #16e8f7;
     text-decoration: none;
 }
+
 .nav a:hover {
-    color: #37f79d;
+    color: #FFD723;
+    text-shadow: 0 0 18px #FFD723;
+    border-radius: 50px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00081a;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
+}
+
+.contact {
+    float: right;
+    padding-top: 5px;
+}
+
+li img {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.model-view-container {
+    position: relative;
+    overflow: hidden;
+    max-height: calc(100vh - 50px);
+    margin-top: -100px;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.model-viewer {
+    width: 80vh;
+    height: 80vh;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 30px;
+    color: #16e8f7;
+    margin-left: 20px;
+}
+
+.vertical-text a {
+    text-decoration: none;
+    color: #16e8f7
+}
+
+.vertical-text a:hover {
+    color: #FFD723;
+    text-shadow: 0 0 18px #FFD723;
+    border-radius: 50px;
+}
+
+.intro-text {
+    text-align: left;
+    margin-left: 50px;
+    font-size: 100px;
+    position: relative;
+}
+
+.intro-text .hover-target::after {
+    content: "ashton.";
+    position: absolute;
+    top: 120px;
+    left: 0;
+    font-size: 1em;
+    color: #16e8f7;
+}
+
+.intro-text .hover-target:hover::after {
+    color: #FFD723;
+    text-shadow: 0 0 18px #FFD723;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+#about-text {
+    padding-top: 200px;
+    font-size: 100px;
+    padding-left: 50px;
+}
+
+.about-me-p-text {
+    margin-left: 50px;
+    margin-top: -50px;
+    text-align: left;
+    width: 1000px;
+    font-size: 20px;
+    color: #16e8f7;
+    text-indent: 10px;
+    position: relative;
+    padding-bottom: 40px;
 }

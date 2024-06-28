@@ -1,10 +1,76 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend&display=swap">
-        <meta charset="utf-8">
-    </head>
-    <div class=nav>
-        <h1><a href="https://github.com/AshtonCee">My GitHub</a></h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend&display=swap">
+    <title>Ashton Coplin Portfolio</title>
+</head>
+<body>
+    <a id="top"></a>
+    <div class="nav">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#top">
+                        <img src="image.png" alt="cat"> <span>Ashton Coplin</span>
+                    </a>
+                </li>
+                <div class="contact">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="about_me.html">Skills</a></li>
+                    <li><a href="contact.html">Projects</a></li>
+                </div>
+            </ul>
+        </nav>
     </div>
+    <div class="grid-container">
+        <div class="intro-container">
+            <h1 class="intro-text">
+                hi, i am <span class="hover-target"></span>
+            </h1>
+            <button type="button" class="button">resume</button>
+        </div>
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js" poster="loading.gif"></script>
+        <div class="model-view-container">
+            <model-viewer class="model-viewer"
+                alt="Vaporwave Tokyo"
+                src="vaporwave_littlest_tokyo_-_3d_editor_challenge.glb"
+                shadow-intensity="1"
+                camera-controls
+                touch-action="pan-y"
+                camera-orbit="220deg auto auto"
+                render-scale=".25"
+                interpolation-decay="25">
+            </model-viewer>
+            <div class="vertical-text" id="text-shadow">
+                <a href="https://sketchfab.com/3d-models/vaporwave-littlest-tokyo-3d-editor-challenge-7b0d071b307c44c6a44e56aac20cd316">
+                    just a silly little model...</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <a id="about"></a>
+        <h1 id="about-text">about me.</h1>
+        <p class="about-me-p-text">Hello, I'm Ashton, a dedicated programmer who's looking to make their mark on the world and exceed
+            in my chosen career field of Computer Science, in both the technical and research aspects. I'm currently a 
+            student at the University of Kansas, enrolled in the School of Engineering, and am expected to graduate in
+            the spring of 2026. 
+        </p>
+        <p class="about-me-p-text">
+            Driven by my own creativity and passion, I've been making and procuring a wide variety of projects in order to
+            further hone my programming skills. I want to one day become a fullstack software engineer, so I try to make every
+            project I create have an efficient backend, as well as a user friendly frontend. I excel at problem-solving the
+            various issues that arise during my work, as well as bringing my creative vision to life.
+        </p>
+        <p class="about-me-p-text">
+            My drive to learn and further my experience with the various programming languages and frameworks that are present
+            everywhere throughout this field has led me to create a wide variety of projects. Technical projects which 
+            taught me data manipulation, the libraries to do said manipulation, backend engineering, and much more are commonplace
+            in my repetoire. Frontend development is another field in which I have a wide variety of experience, teaching me many
+            languages and frameworks to help me create my creative vision.
+        </p>
+    </div>
+</body>
 </html>
