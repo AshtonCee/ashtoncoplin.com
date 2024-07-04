@@ -6,7 +6,37 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend&display=swap">
     <title>Ashton Coplin Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="image.png">
 </head>
+<script>
+    function openGithub() {
+        window.open('https://github.com/AshtonCee', '_blank');
+    }
+
+    function openLinkedIn() {
+        window.open('https://www.linkedin.com/in/ashton-coplin-a64b65240/', '_blank');
+    }
+
+    function openResume() {
+        window.open('https://docs.google.com/document/d/1gx08c9Dn4pvcH4tw8qsLaRY8eTmX-LAbBJKxbC-YC_Q/edit?usp=sharing', '_blank');
+    }
+
+    function toggleDropdown(id) {
+        document.getElementById(id).classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.matches('.drop-btn')) {
+            var dropdowns = document.getElementsByClassName("drop-btn-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
 <body>
     <a id="top"></a>
     <div class="nav">
@@ -17,10 +47,10 @@
                         <img src="image.png" alt="cat"> <span>Ashton Coplin</span>
                     </a>
                 </li>
-                <div class="contact">
+                <div class="nav-bar">
                     <li><a href="#about">About</a></li>
-                    <li><a href="about_me.html">Skills</a></li>
-                    <li><a href="contact.html">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
                 </div>
             </ul>
         </nav>
@@ -30,47 +60,116 @@
             <h1 class="intro-text">
                 hi, i am <span class="hover-target"></span>
             </h1>
-            <button type="button" class="button">resume</button>
+            <div class="button-container">
+                <button type="button" class="button" onclick="openResume()">resume</button>
+                <button type="button" class="button" onclick="openGithub()">
+                        <img src="github-logo.png" alt="github" id="github-logo-resize">
+                </button>
+                <button type="button" class="button" onclick="openLinkedIn()">
+                    <img src="linkedin-logo.png" alt="linedin" id="linkedin-logo-resize">
+                </button>
+            </div>
         </div>
         <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js" poster="loading.gif"></script>
-        <div class="model-view-container">
-            <model-viewer class="model-viewer"
-                alt="Vaporwave Tokyo"
-                src="vaporwave_littlest_tokyo_-_3d_editor_challenge.glb"
-                shadow-intensity="1"
-                camera-controls
-                touch-action="pan-y"
-                camera-orbit="220deg auto auto"
-                render-scale=".25"
-                interpolation-decay="25">
-            </model-viewer>
+            <div class="model-view-container">
+                <model-viewer class="model-viewer"
+                    alt="Vaporwave Tokyo"
+                    src="vaporwave_littlest_tokyo_-_3d_editor_challenge.glb"
+                    shadow-intensity="1"
+                    camera-controls
+                    touch-action="pan-y"
+                    camera-orbit="220deg auto auto"
+                    render-scale=".25"
+                    interpolation-decay="25">
+                </model-viewer>
             <div class="vertical-text" id="text-shadow">
                 <a href="https://sketchfab.com/3d-models/vaporwave-littlest-tokyo-3d-editor-challenge-7b0d071b307c44c6a44e56aac20cd316">
-                    just a silly little model...</a>
+                    just a silly little model...
+                </a>
             </div>
         </div>
     </div>
     <div>
         <a id="about"></a>
-        <h1 id="about-text">about me.</h1>
-        <p class="about-me-p-text">Hello, I'm Ashton, a dedicated programmer who's looking to make their mark on the world and exceed
+        <h1 id="heading-text">about me.</h1>
+        <p class="p-text">Hello, I'm Ashton, a dedicated programmer who's looking to make their mark on the world and exceed
             in my chosen career field of Computer Science, in both the technical and research aspects. I'm currently a 
             student at the University of Kansas, enrolled in the School of Engineering, and am expected to graduate in
             the spring of 2026. 
         </p>
-        <p class="about-me-p-text">
+        <p class="p-text">
             Driven by my own creativity and passion, I've been making and procuring a wide variety of projects in order to
-            further hone my programming skills. I want to one day become a fullstack software engineer, so I try to make every
-            project I create have an efficient backend, as well as a user friendly frontend. I excel at problem-solving the
-            various issues that arise during my work, as well as bringing my creative vision to life.
+            further hone my programming skills. I want to one day become a backend software engineer, so I try to make every
+            project I create have an efficient backend that runs well with minimal issues. The implementation of algorithms
+            in my work is something that interests me a lot. I want to further research and develop the technologies that are
+            becoming commonplace in our modern age, such as AI and machine learning. I excel and take great satisfaction from solving
+            the problems that arise from creating these algorithms, which works wonders for both my productivity and drive to do the
+            best work that I can possibly do.
         </p>
-        <p class="about-me-p-text">
+        <p class="p-text">
             My drive to learn and further my experience with the various programming languages and frameworks that are present
             everywhere throughout this field has led me to create a wide variety of projects. Technical projects which 
             taught me data manipulation, the libraries to do said manipulation, backend engineering, and much more are commonplace
-            in my repetoire. Frontend development is another field in which I have a wide variety of experience, teaching me many
+            in my repertoire. Frontend development is another field in which I have a wide variety of experience, teaching me many
             languages and frameworks to help me create my creative vision.
         </p>
+    </div>
+    <div>
+        <a id="skills">
+        <h1 id="heading-text">my skills.</h1>
+        <div class="logo-container">
+            <img src="python.png" alt="python logo" id="logo-img-size"> 
+            <img src="html.png" alt="html logo" id="logo-img-size"> 
+            <img src="css.png" alt="css logo" id="css-logo-size">
+            <img src="js.png" alt="js logo" id="js-logo-size">
+            <img src="c++.png" alt="c++ logo" id="logo-img-size">
+            <img src="sql.png" alt="sql logo" id="logo-img-size">
+        </div>
+    </div>
+    <div>
+        <a id="projects"></a>
+        <h1 id="heading-text">my projects.</h1>
+        <div class="project-btn-container">
+            <button type="button" class="drop-btn" onclick="toggleDropdown('dropdown1')">this website.
+                <a>
+                    <img src="arrow.png" alt="arrow" id="arrow-resize">
+                </a>
+                <div class="drop-btn-content" id="dropdown1">
+                    <p>My amazing, wonderful, and awesome portfolio website.</p>
+                    <div class="logo-container-in-btn">
+                        <img src="html.png" alt="html logo" id="html-logo-resize-in-btn"> 
+                        <img src="css.png" alt="css logo" id="css-logo-resize-in-btn">
+                        <img src="js.png" alt="js logo" id="js-logo-resize-in-btn">
+                        <a href="https://github.com/AshtonCee/ashtoncoplin.com" id="margin-left">
+                            <img src="github-logo-pink.png" alt="github" id="github-logo-resize-in-btn">
+                        </a>
+                        <a href="https://ashtoncoplin.com/">
+                            <img src="link-img.png" alt="link" id="link-img-resize-in-btn">
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </button>
+        </div>
+    </div>
+    <div class="project-btn-container">
+        <button type="button" class="drop-btn" onclick="toggleDropdown('dropdown2')">achievement tracker.
+            <a>
+                <img src="arrow.png" alt="arrow" id="arrow-resize">
+            </a>
+            <div class="drop-btn-content" id="dropdown2">
+                <p>A program that automatically gathers and tracks all the achievements in a video game. Perfect for people who
+                    like to fully complete their games!
+                </p>
+                <div class="logo-container-in-btn">
+                    <img src="python.png" alt="python logo" id="html-logo-resize-in-btn"> 
+                    <a href="https://github.com/AshtonCee/achievement-tracker" id="margin-left-2">
+                        <img src="github-logo-pink.png" alt="github" id="github-logo-resize-in-btn">
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </button>
     </div>
 </body>
 </html>
